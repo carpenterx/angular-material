@@ -1,0 +1,35 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+  .right-margin {
+    margin-right: 40px;
+  }
+  
+  .wide-btn {
+    display: flex;
+    width: 200px;
+  }
+
+  .row-margin {
+    margin: 4px 10px;
+  }
+
+  .label-margin {
+    margin: 20px 20px;
+  }
+
+  .full-height {
+    height: 100vh;
+  }
