@@ -11,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { FormComponent } from './form/form.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     TableComponent,
     FormComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
