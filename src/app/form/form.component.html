@@ -1,0 +1,36 @@
+<form action="">
+  <h3>Create Template</h3>
+  <mat-form-field appearance="outline">
+    <mat-label>Template Name</mat-label>
+    <input matInput placeholder="Cerere plata online [Person.FirstName] [Person.LastName]">
+  </mat-form-field>
+  <mat-form-field appearance="outline" >
+    <mat-label>Template Content</mat-label>
+    <textarea matInput rows="12"></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Alias Template Name</mat-label>
+    <input matInput placeholder="Beneficiary">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Data group Template</mat-label>
+    <mat-select>
+      <mat-option value="1">Person</mat-option>
+      <mat-option value="2">Contact</mat-option>
+      <mat-option value="3">Company</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Data Templates</mat-label>
+    <mat-select>
+      <mat-option value="1">FirstName</mat-option>
+      <mat-option value="2">LastName</mat-option>
+      <mat-option value="3">Phone</mat-option>
+      <mat-option value="3">Email</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+  <!-- <button mat-stroked-button color="primary">Add</button> -->
+
+  <button mat-raised-button color="primary" type="submit">Create data group template</button>
+  
+</form>

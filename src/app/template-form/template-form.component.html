@@ -1,0 +1,51 @@
+<div class="margin">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <h3>Template Form</h3>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>User Name</mat-label>
+        <input matInput ngModel name="user-name" #userName="ngModel" required>
+        <mat-error *ngIf="userName.errors?.['required']">User Name is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput ngModel name="email" #emailAddress="ngModel" required email>
+        <mat-error *ngIf="emailAddress?.errors?.['required']">E-mail is required</mat-error>
+        <mat-error *ngIf="emailAddress?.errors?.['email']">Invalid e-mail address</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Document Name</mat-label>
+        <input matInput placeholder="Cerere plata online" ngModel name="document-name" required>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Document Content</mat-label>
+        <textarea matInput rows="12" ngModel name="document-content" required></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Alias Name</mat-label>
+        <input matInput placeholder="Beneficiary" ngModel name="alias-name" required>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Data group</mat-label>
+        <mat-select ngModel name="data-group" required>
+          <mat-option value="">Select one</mat-option>
+          <mat-option value="1">Person</mat-option>
+          <mat-option value="2">Contact</mat-option>
+          <mat-option value="3">Company</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <button [disabled]="!form.valid" mat-raised-button color="primary" type="submit">Submit form</button>
+  </form>
+</div>

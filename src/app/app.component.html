@@ -7,7 +7,7 @@
       </button>
     </div>
     <div class="row-margin">
-      <button mat-button class="wide-btn">
+      <button mat-button class="wide-btn" color="accent">
         <mat-icon class="right-margin material-icons-outlined">share</mat-icon>Shared with me
       </button>
     </div>
@@ -41,12 +41,11 @@
   </mat-drawer>
 
   <mat-drawer-content>
-    <mat-toolbar color="primary">
-      <button mat-icon-button aria-label="Example icon-button with menu icon"
-        (click)="drawer.toggle()">
+    <mat-toolbar color="primary" class="sticky mat-elevation-z8">
+      <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>My App</span>
+      <span>Material components</span>
       <span class="example-spacer"></span>
       <button mat-icon-button class="favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
@@ -55,8 +54,20 @@
         <mat-icon>share</mat-icon>
       </button>
     </mat-toolbar>
-    <p class="example-sidenav">You can use Angular Material's Sass mixins to customize component styles within a specific scope in your application. The CSS rule declaration in which you include a Sass mixin determines its scope. The example below shows how to customize the color of all buttons inside elements marked with the .my-special-section CSS class.</p>
-    <p class="example-sidenav">By default, most components indicate browser focus by changing their background color as described by the Material Design specification. This behavior, however, can fall short of accessibility requirements, such as WCAG, which require a stronger indication of browser focus.</p>
-    <p class="example-sidenav">The strong-focus-indicators-theme mixin emits only the indicator's color styles. This mixin should be included once per theme, similar to the theme mixins described above. Additionally, you can use this mixin to change the color of the focus indicators in situations in which the default color would not contrast sufficiently with the background color.</p>
+    <app-template-form></app-template-form>
+    <app-reactive-form></app-reactive-form>
+    <p class="example-sidenav">You can use Angular Material's Sass mixins to customize component styles within a
+      specific scope in your application. The CSS rule declaration in which you include a Sass mixin determines its
+      scope. The example below shows how to customize the color of all buttons inside elements marked with the
+      .my-special-section CSS class.</p>
+    <p class="example-sidenav">By default, most components indicate browser focus by changing their background color as
+      described by the Material Design specification. This behavior, however, can fall short of accessibility
+      requirements, such as WCAG, which require a stronger indication of browser focus.</p>
+    <p class="example-sidenav">The strong-focus-indicators-theme mixin emits only the indicator's color styles. This
+      mixin should be included once per theme, similar to the theme mixins described above. Additionally, you can use
+      this mixin to change the color of the focus indicators in situations in which the default color would not contrast
+      sufficiently with the background color.</p>
+    <app-table></app-table>
+    <app-form></app-form>
   </mat-drawer-content>
 </mat-drawer-container>

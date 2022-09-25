@@ -1,0 +1,12 @@
+table {
+  width: 80%;
+    margin: 4rem;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .padding {
+    padding: 0 1rem;
+  }

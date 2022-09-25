@@ -1,0 +1,53 @@
+<div class="margin">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <h3>Reactive Form</h3>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>User Name</mat-label>
+          <input matInput formControlName="userName">
+          <mat-hint>Required, Uppercase</mat-hint>
+          <mat-error *ngIf="userName?.errors?.['required']">User Name is required</mat-error>
+          <mat-error *ngIf="userName?.errors?.['startsWithLowercase']">First letter should be uppercase</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input matInput type="email" formControlName="emailAddress">
+          <mat-error *ngIf="emailAddress?.errors?.['required']">E-mail is required</mat-error>
+          <mat-error *ngIf="emailAddress?.errors?.['email']">Invalid e-mail address</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Document Name</mat-label>
+          <input matInput placeholder="Cerere plata online" formControlName="documentName">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Document Content</mat-label>
+          <textarea matInput rows="12" formControlName="documentContent"></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Alias Name</mat-label>
+          <input matInput placeholder="Beneficiary" formControlName="aliasName">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Data group</mat-label>
+          <mat-select formControlName="dataGroup">
+            <mat-option value="">Select one</mat-option>
+            <mat-option value="1">Person</mat-option>
+            <mat-option value="2">Contact</mat-option>
+            <mat-option value="3">Company</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <button [disabled]="!reactiveForm.valid" mat-raised-button color="primary" type="submit">Submit form</button>
+    </form>
+  </div>
